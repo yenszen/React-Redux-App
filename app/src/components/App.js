@@ -1,19 +1,23 @@
 import React from "react";
-import { connect } from "react-redux";
-import { fetchVideos } from "../actions";
+import VideoPlayer from "./VideoPlayer";
+import VideoList from "./VideoList";
 
-class App extends React.Component {
-  componentDidMount() {
-    this.props.fetchVideos();
-  }
-
-  render() {
-    return <div>App</div>;
-  }
-}
-
-const mapStateToProps = state => {
-  return { videos: state.videos };
+const App = () => {
+  return (
+    <div className="ui container" style={{ margin: "1rem 0" }}>
+      <h1>Match Highlights</h1>
+      <div className="ui grid">
+        <div className="ui row">
+          <div className="eleven wide column">
+            <VideoPlayer />
+          </div>
+          <div className="five wide column">
+            <VideoList />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default connect(mapStateToProps, { fetchVideos })(App);
+export default App;
