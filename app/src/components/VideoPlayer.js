@@ -13,13 +13,7 @@ const VideoPlayer = ({ video }) => {
 
   return (
     <div>
-      <div className="ui embed">
-        <iframe src={video.url} />
-      </div>
-      <div className="ui segment">
-        <h4 className="ui header">{video.title}</h4>
-        <p>{video.competition.name}</p>
-      </div>
+      <iframe style={{ width: "750px", height: "1000px" }} src={video.url} />
     </div>
   );
 };

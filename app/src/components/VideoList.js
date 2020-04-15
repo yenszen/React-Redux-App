@@ -9,7 +9,6 @@ class VideoList extends React.Component {
   }
 
   render() {
-    // console.log(this.props.onVideoSelect);
     return (
       <div>
         {this.props.videos ? (

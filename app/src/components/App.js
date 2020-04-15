@@ -10,7 +10,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.selectedVideo);
     return (
       <div className="ui container" style={{ margin: "1rem 0" }}>
         <h1>Match Highlights</h1>
