@@ -9,7 +9,7 @@ class VideoList extends React.Component {
   }
 
   render() {
-    console.log(this.props.videos);
+    // console.log(this.props.onVideoSelect);
     return (
       <div>
         {this.props.videos ? (
@@ -17,7 +17,12 @@ class VideoList extends React.Component {
             {this.props.videos.map(video => {
               return (
                 <div key={video.title}>
-                  <VideoItem image={video.thumbnail} title={video.title} />
+                  <VideoItem
+                    image={video.thumbnail}
+                    title={video.title}
+                    onVideoSelect={this.props.onVideoSelect}
+                    video={video}
+                  />
                 </div>
               );
             })}
